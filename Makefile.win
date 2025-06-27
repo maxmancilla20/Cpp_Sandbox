@@ -1,0 +1,31 @@
+# Project: CppSandbox
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Car/Car.o Practice1.o
+LINKOBJ  = Car/Car.o Practice1.o
+LIBS     = -L"F:/msys64/mingw64/lib" -L"F:/msys64/mingw64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"F:/msys64/mingw64/include" -I"F:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include"
+CXXINCS  = -I"F:/msys64/mingw64/include" -I"F:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include"
+BIN      = CppSandbox.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Car/Car.o: Car/Car.cpp
+	$(CPP) -c Car/Car.cpp -o Car/Car.o $(CXXFLAGS)
+
+Practice1.o: Practice1.cpp
+	$(CPP) -c Practice1.cpp -o Practice1.o $(CXXFLAGS)

@@ -6,32 +6,31 @@ using namespace std;
 
 int main() {
 
-  
   Auto miAuto("Toyota", "Corolla", 2022, 0);
 
-   // Mostrar información inicial
-   miAuto.mostrarInformacion();
+  // Mostrar información inicial
+  miAuto.mostrarInformacion();
 
-    cout << "\n";
+  cout << "\n";
 
-    cout << miAuto.GetBrand() << endl;
-    
-    cout << "\n";
+  cout << miAuto.GetBrand() << endl;
+  
+  cout << "\n";
 
-    miAuto.SetBrand("Ford");
-    miAuto.SetModel("Mustang");
-    miAuto.SetYear(2023);
-    miAuto.SetSpeed(100);
+  miAuto.SetBrand("Ford");
+  miAuto.SetModel("Mustang");
+  miAuto.SetYear(2023);
+  miAuto.SetSpeed(100);
 
-    // Mostrar información después de cambios
-    miAuto.mostrarInformacion();
+  // Mostrar información después de cambios
+  miAuto.mostrarInformacion();
 
-    cout << "\n";
+  cout << "\n";
 
-    miAuto.TurnOn();
-    miAuto.TurnOff();
+  miAuto.TurnOn();
+  miAuto.TurnOff();
 
-    cout << "\n";
+  cout << "\n";
 
   return 0;
 }
